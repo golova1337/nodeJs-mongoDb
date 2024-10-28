@@ -1,0 +1,53 @@
+[
+    {
+      "brand": "Toyota",
+      "model": "Camry",
+      "price": "25000",
+      "description": "A comfortable and fuel-efficient sedan.",
+      "color": "Blue",
+      "category_id": "1",
+      "createdAt": "2020-01-15T12:34:56.789Z",
+      "updatedAt": "2023-10-20T12:34:56.789Z"
+    },
+    {
+      "brand": "Honda",
+      "model": "Civic",
+      "price": "22000",
+      "description": "A reliable compact car with modern features.",
+      "color": "Red",
+      "category_id": "2",
+      "createdAt": "2019-03-12T10:15:30.123Z",
+      "updatedAt": "2023-10-21T10:15:30.123Z"
+    },
+    {
+      "brand": "Ford",
+      "model": "Mustang",
+      "price": "45000",
+      "description": "A sporty car with powerful performance.",
+      "color": "Black",
+      "category_id": "3",
+      "createdAt": "2021-05-01T08:00:00.000Z",
+      "updatedAt": "2023-10-22T08:00:00.000Z"
+    },
+    {
+      "brand": "Chevrolet",
+      "model": "Tahoe",
+      "price": "60000",
+      "description": "A spacious SUV perfect for families.",
+      "color": "White",
+      "category_id": "4",
+      "createdAt": "2018-07-22T14:20:45.000Z",
+      "updatedAt": "2023-10-23T14:20:45.000Z"
+    },
+    {
+      "brand": "Tesla",
+      "model": "Model 3",
+      "price": "35000",
+      "description": "An all-electric sedan with cutting-edge technology.",
+      "color": "Silver",
+      "category_id": "5",
+      "createdAt": "2022-09-05T16:30:00.000Z",
+      "updatedAt": "2023-10-24T16:30:00.000Z"
+    }
+  ]
+  

@@ -1,0 +1,3 @@
+password: example
+uri: mongodb://root:example@localhost:27017
+
