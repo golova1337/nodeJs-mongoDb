@@ -20,12 +20,12 @@ Docker: A platform that enables the deployment of applications in containers, en
 First, clone the repository to your local machine. Open your terminal and run the following command:
 
 ```bash
-git clone https://github.com/
+git clone https://github.com/golova1337/nodeJs-mongoDb
 ```
 
 ### 2. Create the .env File
 
-Next, create a .env file by following the structure provided in .env.example. Make sure to fill in the necessary environment variables.
+Next, create a **.env** file by following the structure provided in .env.example. Make sure to fill in the necessary environment variables.
 
 ### 3. Install Docker
 
@@ -33,7 +33,7 @@ Ensure that you have Docker installed on your machine. If you don't have it yet,
 
 ### 4. Run Docker
 
-To start the application, run the following command in your terminal: docker-compose up or docker-compose up -d
+To start the application, run the following command in your terminal: **docker-compose** up or **docker-compose up -d**
 
 Congratulate, you can use app
 

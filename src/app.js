@@ -1,10 +1,9 @@
 const config = require("./infrastructure/config/envConfig");
 
-
 const express = require("express");
 const app = express();
 
-const logger = require("./logger/logger");
+const logger = require("./common/logger/logger");
 const connection = require("./infrastructure/db/connection")();
 
 const carsRouter = require("./cars/cars.router");
@@ -24,3 +23,5 @@ app.use("/categories", categoryRouter);
 app.listen(parseInt(process.env.PORT, 10) || 3000, () => {
   console.log(`Example app listening on port `);
 });
+
+module.exports = app;
