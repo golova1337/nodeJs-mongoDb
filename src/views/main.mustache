@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        .category { margin-bottom: 30px; }
+        .subcategory, .car { margin-left: 20px; }
+        img { max-width: 200px; height: auto; } 
+    </style>
+</head>
+<body>
+    <h1>Categories</h1>
+    {{#categories}}
+    <div class="category">
+        <h2>{{name}}</h2>
+        <p>{{description}}</p>
+        <h3>Photos</h3>
+        {{#photos}}
+        <img src="{{.}}" alt="Category Photo" />
+        {{/photos}}
+
+        <h3>Subcategories</h3>
+        {{#subcategories}}
+        <div class="subcategory">
+            <h4>{{name}}</h4>
+            <p>{{description}}</p>
+            <h5>Photos</h5>
+            {{#photos}}
+            <img src="{{.}}" alt="Subcategory Photo" />
+            {{/photos}}
+        </div>
+        {{/subcategories}}
+
+        <h3>Cars</h3>
+        {{#cars}}
+        <div class="car">
+            <h4>Brand: {{brand}}</h4>
+            <p>Model: {{model}}</p>
+            <p>Price: ${{price}}</p>
+            <p>Description: {{description}}</p>
+            <p>Color: {{color}}</p>
+        </div>
+        {{/cars}}
+    </div>
+    {{/categories}}
+</body>
+</html>

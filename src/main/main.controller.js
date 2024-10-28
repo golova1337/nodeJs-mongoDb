@@ -3,8 +3,8 @@ const MainService = require("./main.service");
 class MainController {
   async getAllCarsByCategory(req, res) {
     try {
-      const allCarsByCategory = await MainService.getAllCarsByCategory();
-      return res.status(200).json(allCarsByCategory);
+      const categories = await MainService.getAllCarsByCategory();
+      return res.status(200).render("main", { categories });
     } catch (error) {
       console.log(error);
 
