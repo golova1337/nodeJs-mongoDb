@@ -27,7 +27,7 @@ class CategoriesController {
     const categoryId = req.params.categoryId;
     try {
       const category = await CategoriesService.getByid(categoryId);
-      return res.status(200).json(category);
+      return res.status(200).render("category", category);
     } catch (error) {
       return res.status(500).json({ message: "Internal Server Error" });
     }

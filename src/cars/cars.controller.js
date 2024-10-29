@@ -27,7 +27,7 @@ class CarsController {
     try {
       const id = req.params.id;
       const car = await CarsService.getByid(id);
-      return res.status(200).json(car);
+      return res.status(200).render("car", car);
     } catch (error) {
       return res.status(500).json({ message: "Internal Server Error" });
     }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Information</title>
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .car-card {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .car-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #dcdcdc;
+            display: block;
+        }
+
+        .car-details {
+            padding: 20px;
+        }
+
+        .car-brand-model {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .car-price {
+            font-size: 1.1em;
+            color: #3498db;
+            margin: 10px 0;
+        }
+
+        .car-color {
+            font-size: 1em;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .car-description {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 15px;
+            line-height: 1.4;
+        }
+
+        .car-dates {
+            font-size: 0.8em;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="car-card">
+        {{#photos}}
+            <img src="{{.}}" alt="Photo of {{brand}} {{model}}">
+        {{/photos}}
+
+        <div class="car-details">
+            <div class="car-brand-model">{{brand}} {{model}}</div>
+            <div class="car-price">Price: ${{price}}</div>
+            <div class="car-color">Color: {{color}}</div>
+            <p class="car-description">{{description}}</p>
+        </div>
+    </div>
+
+</body>
+</html>
+

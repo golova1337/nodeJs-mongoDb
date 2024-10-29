@@ -1,50 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Categories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Cars</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h1 { color: #333; }
-        .category { margin-bottom: 30px; }
-        .subcategory, .car { margin-left: 20px; }
-        img { max-width: 200px; height: auto; } 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .category, .subcategory, .car {
+            background-color: #fff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .category h2, .subcategory h3, .car h3 {
+            margin: 0 0 10px;
+        }
+
+        .description, .price, .color, .dates {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .photos img {
+            max-width: 100px; 
+            height: auto; 
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .subcategory-list, .car-list {
+            margin: 15px 0;
+            padding: 0;
+            list-style-type: none;
+        }
     </style>
 </head>
 <body>
-    <h1>Categories</h1>
-    {{#categories}}
-    <div class="category">
-        <h2>{{name}}</h2>
-        <p>{{description}}</p>
-        <h3>Photos</h3>
-        {{#photos}}
-        <img src="{{.}}" alt="Category Photo" />
-        {{/photos}}
 
-        <h3>Subcategories</h3>
-        {{#subcategories}}
-        <div class="subcategory">
-            <h4>{{name}}</h4>
-            <p>{{description}}</p>
-            <h5>Photos</h5>
-            {{#photos}}
-            <img src="{{.}}" alt="Subcategory Photo" />
-            {{/photos}}
-        </div>
-        {{/subcategories}}
+    <h1>Rent Cars</h1>
 
-        <h3>Cars</h3>
-        {{#cars}}
-        <div class="car">
-            <h4>Brand: {{brand}}</h4>
-            <p>Model: {{model}}</p>
-            <p>Price: ${{price}}</p>
-            <p>Description: {{description}}</p>
-            <p>Color: {{color}}</p>
+    <div id="categories-list">
+        {{#categories}}
+        <div class="category">
+            <h2><a href="/categories/{{_id}}">{{name}}</a></h2>
+            <p class="description">{{description}}</p>
+
+         
+            <div class="photos">
+                {{#photos}}
+                <img src="{{.}}" alt="Photos {{name}}">
+                {{/photos}}
+            </div>
+
+
+            
+            <ul class="subcategory-list">
+                {{#subcategories}}
+                <li class="subcategory">
+                    <h3>{{name}}</h3>
+                    <p class="description">{{description}}</p>
+                    <div class="photos">
+                        {{#photos}}
+                        <img src="{{.}}" alt="Photos {{name}}">
+                        {{/photos}}
+                    </div>
+
+            
+                </li>
+                {{/subcategories}}
+            </ul>
+
+          
+            <ul class="car-list">
+                {{#cars}}
+                <li class="car">
+                    <h3><a href="/cars/{{_id}}">{{brand}} {{model}}</a></h3>
+                    <p class="price">Price: {{price}} USD</p>
+                    <p class="color">Color: {{color}}</p>
+                    <p class="description">{{description}}</p>
+                   
+                </li>
+                {{/cars}}
+            </ul>
         </div>
-        {{/cars}}
+        {{/categories}}
     </div>
-    {{/categories}}
+
 </body>
 </html>

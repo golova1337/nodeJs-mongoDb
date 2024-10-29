@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 20px;
+        }
+        .product {
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .product h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        .product p {
+            font-size: 16px;
+            color: #666;
+        }
+        .product ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .subcategory {
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .subcategory a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .subcategory h3 {
+            font-size: 18px;
+        }
+        .subcategory h4 {
+            font-size: 16px;
+            color: #333;
+        }
+        .subcategory img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="product">
+    <h1>{{name}}</h1>
+    <p>{{description}}</p>
+    <h2>Photos</h2>
+    <ul>
+        {{#photos}}
+            <li>
+                <img src="{{.}}" alt="{{name}}" />
+            </li>
+        {{/photos}}
+    </ul>
+
+    <h2>Subcategories</h2>
+    <ul>
+        {{#subcategories}}
+            <li class="subcategory">
+                    <h3>{{name}}</h3>
+                    <p>{{description}}</p>
+                    <h4>Photos</h4>
+                    <ul>
+                        {{#photos}}
+                            <li>
+                                <img src="{{.}}" alt="{{name}}" />
+                            </li>
+                        {{/photos}}
+                    </ul>
+                </a>
+            </li>
+        {{/subcategories}}
+    </ul>
+</div>
+
+</body>
+</html>

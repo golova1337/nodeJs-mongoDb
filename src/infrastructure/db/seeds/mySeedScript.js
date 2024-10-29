@@ -40,6 +40,7 @@ function generateSeedsCars(idsCategories) {
       price: faker.commerce.price({ min: 1000, max: 200000 }),
       description: faker.lorem.sentence(),
       color: faker.vehicle.color(),
+      photos: [faker.image.url()],
       category_id: idsCategories[i],
       createdAt: faker.date.past(),
       updatedAt: faker.date.recent(),
