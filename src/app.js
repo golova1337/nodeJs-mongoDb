@@ -1,10 +1,7 @@
 const config = require("./infrastructure/config/envConfig");
-
 const express = require("express");
 const app = express();
-
 const mustacheExpress = require("mustache-express");
-
 const logger = require("./common/logger/logger");
 const connection = require("./infrastructure/db/connection")();
 

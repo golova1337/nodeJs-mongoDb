@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const configuration = require("../config/db.config");
 
-const URL = `mongodb://${configuration.username}:${configuration.password}@mongo:${configuration.port}`;
+const URL = `mongodb://${configuration.username}:${configuration.password}@localhost:${configuration.port}`;
 async function main() {
   try {
     await mongoose.connect(URL);
